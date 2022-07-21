@@ -1,10 +1,10 @@
 <template>
-    <div class="container">
+    <div class="container vw-50">
         <aside class="container-aside">
             <div class="containerAside-header">
-              <div class="asideHeader-userInformations">
+                <div class="asideHeader-userInformations">
                 <img src="https://i.postimg.cc/sDjnJCtj/Meagan-2.jpg" class="asideHeader-imgUserImage">
-                  <h3 class="asideHeader-lblUserName">Meagan Williams</h3>
+                  <h3 class="asideHeader-lblUserName"><span>M</span>eagan <span>W</span>illiams</h3>
                     <div class="asideHeader-socialsBox">
                         <a href="#" class="asideHeader-btnSocial"><i class="bi-github"></i></a>
                         <a href="#" class="asideHeader-btnSocial"><i class="bi-linkedin"></i></a>
@@ -13,53 +13,52 @@
             </div>
             <div class="containerAside-main">
                 <div class="asideMain-menuItemsBox">
-                    <div class="asideMain-menuItem">
+                    <!-- <div class="asideMain-menuItem">
                         <a href="home" class="mainMenu-btnMenuItem"><i class="bi-house"></i> <span
                         class="mainMenu-lblMenuItem">Home</span></a>
-                    </div>
+                    </div> -->
                     <div class="asideMain-menuItem">
                         <a href="about" class="mainMenu-btnMenuItem"><i class="bi-person"></i> <span
                         class="mainMenu-lblMenuItem">About</span></a>
                     </div>
                     <div class="asideMain-menuItem">
-                        <a href="resume" class="mainMenu-btnMenuItem"><i class="bi-file"></i> <span
+                        <a href="resume" class="mainMenu-btnMenuItem"><i class="bi bi-file"></i> <span
                         class="mainMenu-lblMenuItem">Resume</span></a>
                     </div>
                     <div class="asideMain-menuItem">
-                        <a href="projects" class="mainMenu-btnMenuItem"><i class="bi-book"></i> <span
+                        <a href="projects" class="mainMenu-btnMenuItem"><i class="bi bi-book"></i> <span
                         class="mainMenu-lblMenuItem">Projects</span></a>
                     </div>
                     <div class="asideMain-menuItem">
-                        <a href="contact" class="mainMenu-btnMenuItem"><i class="bi-envelope"></i> <span
+                        <a href="contact" class="mainMenu-btnMenuItem"><i class="bi bi-envelope"></i> <span
                         class="mainMenu-lblMenuItem">Contacts</span></a>
+                    </div>
+                    <div class="asideMain-menuItem">
+                        <a href="testimonial" class="mainMenu-btnMenuItem"><i class="bi bi-chat-left-quote"></i> <span
+                        class="mainMenu-lblMenuItem">Testimonial</span></a>
                     </div>
                 </div>
             </div>
         </aside>
-        <main class="container-main">
-            <div class="containerMain-backgroundFilter"></div>
-            <h1 class="containerMain-lblName">Meagan Williams</h1>
-            <p class="containerMain-lblAbility">I'm <span>Developer</span></p>
-            <button onclick="ShowMenu()" class="containerMain-ShowMenu"><i class="bi-list"></i></button>
+        <main class=" container-fluid" style="height: 100vh">
+        <div id="landing">
+            <div class="container-small">
+                <p class="title">An Aspiring Web developer</p>
+                <p class="words">Welcome to my portfolio. I enjoy creating and designing colourful, fun, simplistic websites with a touch of minimalism. 
+                <br>I'm passionate about web development and I believe it's one of the most powerful resources to put yourself out there</p>
+            </div>
+        </div>
         </main>
     </div>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&family=Raleway:wght@700&display=swap');
-* {
-    font-family: 'Raleway', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 :root {
-    --color-primary: #1fb2ed;
+    --color-primary: #ef1e48;
     --color-white: #e8e6e3;
     --color-black: #030910;
-    --color-dark: #1a1d27;
-    --color-gray: #9d9487;
+    --color-dark: #642330;
+    --color-gray: #9d8790;
 
 
     --font-Poppins: 'Poppins', sans-serif;
@@ -77,53 +76,44 @@
     --size-xs: 500px;
 }
 
-html, body {
-    height: 100%;
-}
-
-a {
-    text-decoration: none;
-}
-
-div.container {
+.container-fluid {
     width: 100%;
     height: 100%;
-}
-
-.container-aside {
-    width: 20%;
-    max-width: 300px;
-    min-width: 300px;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 4;
-    background-color: var(--color-black);
-    transition: left 1s;
-}
-
-.showMenu {
-    left: 0 !important;
-}
-
-.container-main {
-    width: 100%;
-    height: 100%;
-    background: url("https://i.postimg.cc/N09qG5TF/images.jpg") no-repeat center;
+    background: url("https://i.postimg.cc/sDjnJCtj/Meagan-2.jpg") no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-}
-
-.containerMain-backgroundFilter {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.253);
+    align-items: flex-end;
+    right: 0;
+    background-color: rgba(37, 37, 37, 0.253);
     position: absolute;
     z-index: 2;
+}
+
+.container-small{
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    justify-content: center;
+    right:20px;
+    background-color: var(--color-dark);
+    color: var(--color-black);
+}
+
+.container-small span{
+    color: var(--color-primary);
+}
+
+
+.title{
+    font-size: var(--font-md); 
+    font-weight: var(--size-lg);
+}
+
+.words{
+    font-size: var(--font-sm);
+    font-weight: var(--size-lg);
 }
 
 .containerMain-lblName, .containerMain-lblAbility {
@@ -172,35 +162,6 @@ div.container {
     padding: 0;
 }
 
-.asideHeader-imgUserImage {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #000000;
-    margin-bottom: 20px;
-}
-
-.asideHeader-lblUserName {
-    font-family: var(--font-Poppins);
-    font-size: var(--font-md);
-    font-weight: 600;
-    color: var(--color-white);
-    margin-bottom: 20px;
-}
-
-.asideHeader-btnSocial {
-    padding: 10px 12px;
-    margin: 0 2px;
-    border-radius: 50%;
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    font-size: var(--font-sm);
-    transition: background-color .5s;
-}
-
-.asideHeader-btnSocial:hover {
-    background-color: var(--color-primary);
-}
 
 .containerAside-main, .asideMain-menuItemsBox {
     width: 100%;
@@ -264,21 +225,10 @@ div.container {
     justify-content: center;
 }
 
-.asideFooter-lblCopyRight, .asideFooter-lblInfo {
-    font-family: var(--font-OpenSans);
-    font-size: var(--font-sm);
-    font-weight: 400;
-    color: #accbef;
-}
-
 .asideFooter-lblInfo {
     font-size: 13px;
     color: var(--color-white);
     margin-top: 10px;
-}
-
-.asideFooter-lblInfo strong {
-    color: #36b2ed;
 }
 
 @media screen and (max-width: 1200px) {

@@ -1,17 +1,14 @@
 <template>
-    <h2>CONTACT PAGE</h2>
-    <ContactForm />
-    <Foot />
+    <Contact />
 </template>
 
 <script>
 // import ContactForm from "./components/contact.vue";
-import Foot from "@/components/footer.vue";
+import Contact from "@/components/contact.vue"
 
 export default {
     components: {
-        ContactForm,
-        Foot
+        Contact,
     }
 };
 </script>

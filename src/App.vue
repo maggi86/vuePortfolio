@@ -1,13 +1,11 @@
-<template>
-<div class="">
-  <div id="navbar">
-  <Navbar/>
-  </div>
-</div>
+<template>   
+<Navbar/>
+
+<main>
+  <router-view />
+</main>
+
 <foot />
-<router-view />
-
-
 </template>
 
 <script>
@@ -19,20 +17,14 @@ export default {
   components: {
     Navbar,
     foot
-  },
+},
 };
 </script>
-<style >
-/* *{
-        overflow: hidden !important;
-} */
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  overflow-x:hidden ;
+
+<style>
+main{
+  margin-left: 250px
 }
 </style>
+
 
